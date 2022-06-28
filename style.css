@@ -1,0 +1,96 @@
+body{
+    padding: 0%;
+    margin: 0%;
+}
+#nav{
+    display:flex;
+    box-shadow: 0px 2px 10px black;
+    height: calc(13vh);
+    width: 100%;
+    background-color: gray;
+    border: 1px solid black;
+}
+#normal{
+    list-style: none;
+    color: white;
+    margin-left: 10px;
+}
+#normal li{
+    height: 100%;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+    padding: 5px 20px 5px 20px;
+    margin-left: 5px;
+}
+.logo{
+    padding-top: 20px;
+    width: 15%;
+    height: 100%;
+    text-align: center;
+}
+.logo span{
+    color: rgb(255, 255, 255);
+    font-size: 1.6em;
+    font-family: 'Trebuchet MS';
+    text-shadow: 1px 5px 6px rgb(51, 38, 38);
+    font-weight: bold;
+}
+
+.othertools:hover{
+    background-color: rgb(71, 69, 69);
+}
+#normal li a{
+    text-decoration: none;
+    color: white;
+}
+#lab{
+    font-size: 1.5em;
+    color: white;
+    align-items: center;
+    justify-content: center;
+}
+#dropdown{
+    display: none;
+    margin-left: 66%;
+}
+.click{
+    display: none;
+    list-style: none;
+    color: white;
+    position: static;
+    margin-top: 50px;
+}
+.click li{
+    margin-left: 0%;
+    padding: 10px 20px 10px 20px;
+    background-color:gray ;
+}
+.click li:hover{
+    background-color: blue;
+}
+#show{
+    display: none;
+}
+@media screen and (max-width: 600px) {
+    .logo{
+        padding-top: 5px;
+    }
+    #lab{
+        display: flex;
+    }
+    label{
+        cursor: pointer;
+    }
+    #dropdown{
+        display: flex;
+        flex-direction: column;
+    }
+    #normal{
+        display: none;
+    }
+    #show:checked+.click{
+        display: block;
+    }
+  }

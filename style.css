@@ -185,12 +185,21 @@ body{
 #lastname{
     margin-top: 15px;
 }
+        /*=====*/
 #sign-up-content{
+    display: none; 
+ } 
+#log-in-content{
     display: none; 
  }
 
 
 
+ @media screen and (max-width: 1250px) {
+    #modal-btn{
+        margin-left: 28%;
+    }
+}
 @media screen and (max-width: 1085px) {
     #normal li{
         padding: 10px 10px 10px 10px;
@@ -203,7 +212,7 @@ body{
         margin-left:0px;
     }
     #modal-btn{
-        margin-left: 20%;
+        margin-left: 12%;
     }
     #modal-body{
         left: 20%;
@@ -221,7 +230,7 @@ body{
         margin-left: 50%;
     }
     #modal-btn{
-        margin-left: 7%;
+        margin-left: 12%;
     }
     #modal-body{
         width: 450px;
@@ -230,5 +239,13 @@ body{
   @media screen and (max-width: 500px) {
     #modal-body{
         width: 450px;
+    }
+    #modal-btn{
+        margin-left: 3%;
+    }
+  }
+  @media screen and (max-width: 550px) {
+    #modal-btn{
+        margin-left: 2%;
     }
   }

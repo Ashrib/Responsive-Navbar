@@ -1,6 +1,6 @@
 var modal = document.getElementById("modal");
 function signIn() {
-    if (modal.style.display=="none"){
+    if (modal.style.display === "none"){
                 modal.style.display = "flex";
     }
     else{
@@ -10,6 +10,30 @@ function signIn() {
 function closeMod() {
     modal.style.display="none";
 };
+
+var logTab = document.getElementById("login-tab");
+var signTab = document.getElementById("signup-tab");
+var logTabContent = document.getElementById("log-in-content");
+var signTabContent = document.getElementById("sign-up-content");
+function changeTab(a) {
+    
+    if(a === "1") {
+        signTabContent.style.display === "none";
+        logTabContent.style.display = "block";
+        logTab.style.background = "#a4b3c4";
+        signTab.style.background = "#828e9b";
+    }
+    else if(a === "2") {
+        logTabContent.style.display = "none";
+        signTabContent.style.display === "block";
+        logTab.style.background = "#828e9b";
+        signTab.style.background = "#a4b3c4";
+    }
+}
+
+
+
+
 function submit() {
     var userName = document.getElementById("username").value;
     var email = document.getElementById("email-inp").value;
@@ -60,14 +84,14 @@ function submit() {
     }
 };
 
+var state = false;
 function showPass() {
-    var state = false;
-    if(state = false){
+    if(state){
         document.getElementById("password").setAttribute("type", "password");
-        state = true;
-    }
-    else if(state = true){
-        document.getElementById("password").setAttribute("type", "text");
         state = false;
+    }
+    else{
+        document.getElementById("password").setAttribute("type", "text");
+        state = true;
     }
 };

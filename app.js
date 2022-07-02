@@ -15,17 +15,17 @@ var logTab = document.getElementById("login-tab");
 var signTab = document.getElementById("signup-tab");
 var logTabContent = document.getElementById("log-in-content");
 var signTabContent = document.getElementById("sign-up-content");
+
 function changeTab(a) {
-    
     if(a === "1") {
-        signTabContent.style.display === "none";
+        signTabContent.style.display = "none";
         logTabContent.style.display = "block";
         logTab.style.background = "#a4b3c4";
         signTab.style.background = "#828e9b";
     }
     else if(a === "2") {
         logTabContent.style.display = "none";
-        signTabContent.style.display === "block";
+        signTabContent.style.display = "block";
         logTab.style.background = "#828e9b";
         signTab.style.background = "#a4b3c4";
     }
@@ -74,7 +74,6 @@ function submit() {
     var letters = /^[A-Za-z]+$/;
 
     if(userName.match(letters)) {
-        alert("Welcome " + userName);
         console.log("Username: " + userName);
         console.log("Email: " +email);
         console.log("Password: " +password);

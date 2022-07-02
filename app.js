@@ -1,7 +1,7 @@
-
+var modal = document.getElementById("modal");
 function signIn() {
     if (modal.style.display=="none"){
-                modal.style.display = "block";
+                modal.style.display = "flex";
     }
     else{
         modal.style.display = "none";
@@ -10,7 +10,6 @@ function signIn() {
 function closeMod() {
     modal.style.display="none";
 };
-
 function submit() {
     var userName = document.getElementById("username").value;
     var email = document.getElementById("email-inp").value;
@@ -63,12 +62,12 @@ function submit() {
 
 function showPass() {
     var state = false;
-    if(state){
+    if(state = false){
         document.getElementById("password").setAttribute("type", "password");
-        state = false;
-    }
-    else{
-        document.getElementById("password").setAttribute("type", "text");
         state = true;
+    }
+    else if(state = true){
+        document.getElementById("password").setAttribute("type", "text");
+        state = false;
     }
 };

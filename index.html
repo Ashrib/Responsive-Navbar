@@ -33,25 +33,40 @@
                     </ul>
                   </div>
                                 <!-- modal -->
-                  <div id="modal-btn"><button class="btn-primary" id="sign-in" onclick="signIn()">Sign in</button></div>
+                  <div id="modal-btn"><button class="btn-primary" id="sign-in" onclick="signIn()">Log in / Sign up</button></div>
                   
-                  <div id="modal" class="row">
+                  <div id="modal" class="modal-container">
                     <div id="modal-body" class="sign col-sm-9 col-md-10 col-11 col-lg-8 col-xl-7 col-xxl-8">
-                      <div id="modal-head">
-                        <h4>Sign in</h4>
-                           <button type="button" class="btn btn-close" onClick="closeMod()"></button>
+                      <div id="tab-container">
+                        <div id="login-tab" class="tabs" onClick="changeTab('1')">Log in</div>
+                        <div id="signup-tab" class="tabs" onClick="changeTab('2')">sign up</div>
                       </div>
+                      <div id="all-content-box">
+                        <div id="modal-head">
+                          <button type="button" class="btn btn-close" onClick="closeMod()"></button>
+                     </div>
 
-                      <div id="modal-content">
-                        <form action="" method="get">
-                          <input type="text" placeholder="User name" maxlength="20" id="username"/><p class="error" id="n-error"></p>
-                          <input id="email-inp" type="email" placeholder="@email" maxlength="30" id="email"/><p class="error" id="eml-error"></p>
-                          <input type="password" placeholder="Password" maxlength="15" id="password"/><button id="pass-show" onClick="showPass()"><i class="fa-solid fa-eye"></i></button><p class="error" id="pass-error"></p>
-                         </form>
+                     <div id="modal-content">
+                                      <!-- Log in tab -->
+                       <div id="log-in-content">
+                         <input type="text" placeholder="User name" maxlength="20" id="username"/><p class="error" id="n-error"></p>
+                         <input id="email-inp" type="email" placeholder="@email" maxlength="30" id="email"/><p class="error" id="eml-error"></p>
+                         <input type="password" placeholder="Password" maxlength="15" id="password"/><button id="pass-show" onClick="showPass()" title="show password"><i class="fa-solid fa-eye"></i></button><p class="error" id="pass-error"></p>
+                       </div>
+                                      <!-- Sign up tab -->
+                       <div id="sign-up-content">
+                        <input type="text" placeholder="First name" maxlength="12" id="firstname"/><p class="error" id="n-error"></p>
+                        <input type="text" placeholder="last name" maxlength="12" id="lastname"/><p class="error" id="n-error"></p>
+                        <input id="email-inp" type="email" placeholder="@email" maxlength="30" id="email"/><p class="error" id="eml-error"></p>
+                        <input type="password" placeholder="Create Password" maxlength="15" id="password"/><button id="pass-show" onClick="showPass()" title="show password"><i class="fa-solid fa-eye"></i></button><p class="error" id="pass-error"></p>
+                        <input type="password" placeholder="Re-write Password" maxlength="15" id="re-password"/><button id="pass-show" onClick="showPass()" title="show password"><i class="fa-solid fa-eye"></i></button><p class="error" id="pass-error"></p>
                       </div>
+                        
+                     </div>
 
-                      <div id="modal-end">
-                        <button type="button" class="btn btn-danger" onClick="submit()">Submit</button>
+                     <div id="modal-end">
+                       <button type="button" class="btn btn-danger" onClick="submit()">Submit</button>
+                     </div>
                       </div>
                     </div>
                     <!-- modal body end-->

@@ -43,6 +43,7 @@ body{
     text-decoration: none;
     color: white;
 }
+                    /* dropdown list */
 .dropdown{
     display: none;
     position: static !important;
@@ -62,6 +63,7 @@ body{
     text-align: center;
     color: white;
 }
+                /* modal */
 #modal{
     display: none;
 }
@@ -72,54 +74,96 @@ body{
     align-items: center;
     margin-left: 50%;
 }
+.modal-container{
+    display: flex;
+    position: absolute;
+    width: calc(100vw);
+    height: calc(100vh);
+    background-color: rgba(0, 0, 0, 0.514);
+    justify-content: center;
+    align-items: center;
+    left: 0%;
+    top: 0%;
+}
+#all-content-box{
+    background-color: #a4b3c4;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90%;
+    border-radius: 0px 70px 0px 70px;
+}
 #modal-body{
     display: flex;
     flex-direction: column;
-    position: absolute;
-    left: 30%;
-    bottom: 25%;
-    height: 55%;
-    width: 500px;
-    padding: 0%;
+    height: 65%;
+    width: 550px;
+}
+#tab-container{
+    display: flex;
+    width: 100%;
+    height: 10%;
+    justify-content: center;
 }
 #modal-head{
     display: flex;
     width: 100%;
-    height: 20%;
-    background-color: antiquewhite;
-    justify-content: space-between;
+    height: 8%;
     align-items: center;
-    padding-left: 20px;
-    padding-right: 20px;
-    text-transform: uppercase;
-    letter-spacing: 1ch;
-    background-color: rgb(141, 141, 141);
+    justify-content: flex-end;
+    padding-right: 45px;
+}
+.tabs{
+    display: flex;
+    height: 100%;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0px 50px 0px 50px;
+    align-self: flex-end;
+    letter-spacing: 0.5ch;
+    font-weight: 500;
     text-shadow: 5px 4px 9px #000000ab;
-    color: white;
+    color: rgba(20, 4, 4, 0.863);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.tabs:hover{
+    box-shadow: 0px -8px 10px rgba(0, 0, 0, 0.171);
+    padding-bottom: 10px;
+}
+#login-tab{
+    background-color: #a4b3c4;
+}
+#signup-tab{
+    background-color: #828e9b;
+    
 }
 #modal-content{
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 65%;
-    background-color: rgb(228, 228, 228);
+    height: 80%;
 }
 #modal-end{ 
     display: flex;
     align-items: center;
     justify-content: flex-end;
     width: 100%;
-    height: 15%;
+    height: 12%;
     padding-right: 30px;
-    background-color: rgb(141, 141, 141);
+    border-top: 1px solid gray;
 }
-form input{
+#modal-content input{
     border-radius: 10px;
     border: 3px solid black;
     padding: 7px 5px 7px 15px;
     width: 300px;
 }
+            /* login tab */
+
 #email-inp{
     margin-top: 15px;
 }
@@ -137,6 +181,15 @@ form input{
     border: none;
     background-color: transparent;
 }
+            /* signup tab */
+#lastname{
+    margin-top: 15px;
+}
+#sign-up-content{
+    display: none; 
+ }
+
+
 
 @media screen and (max-width: 1085px) {
     #normal li{
@@ -150,7 +203,7 @@ form input{
         margin-left:0px;
     }
     #modal-btn{
-        margin-left: 30%;
+        margin-left: 20%;
     }
     #modal-body{
         left: 20%;
@@ -168,15 +221,14 @@ form input{
         margin-left: 50%;
     }
     #modal-btn{
-        margin-left: 10%;
+        margin-left: 7%;
     }
     #modal-body{
-        left: 10%;
+        width: 450px;
     }
   }
   @media screen and (max-width: 500px) {
     #modal-body{
-        left: 5%;
         width: 450px;
     }
   }

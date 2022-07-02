@@ -9,6 +9,10 @@ function signIn() {
 };
 function closeMod() {
     modal.style.display="none";
+
+    var userName = document.getElementById("username").value = null;
+    var email = document.getElementById("email-inp").value = null;
+    var password = document.getElementById("password").value = null; 
 };
 
 var logTab = document.getElementById("login-tab");
@@ -81,6 +85,8 @@ function submit() {
     else {
         nameError.innerText = "Only letters are allowed!";
     }
+
+
 };
 
 var state = false;
